@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
+    <title>Eventos - IFSP</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+      }
+      .navbar a,
+      .dropdown .dropbtn {
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+      .navbar a.active {
+        color: #ff4d4d;
+      }
+      .dropdown {
+        overflow: hidden;
+      }
+      .dropdown .dropbtn {
+        border: none;
+        outline: none;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        cursor: pointer;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 250px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .header-logo {
+        background-color: #007a33;
+        width: 100%;
+      }
+      .header-logo img {
+        max-height: 110px;
+        padding: 15px 40px;
+        display: block;
+      }
+      main {
+        padding: 20px 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+      }
+      fieldset {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .form-group-block {
+        margin-bottom: 20px;
+      }
+      .form-group-block label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.95em;
+      }
+      .form-group-block input,
+      .form-group-block select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .form-group-inline {
+        margin-bottom: 15px;
+      }
+      .form-group-inline label {
+        display: inline-block;
+        width: 150px;
+        font-size: 0.95em;
+      }
+      .form-group-inline input {
+        padding: 4px;
+        width: 250px;
+        border: 1px solid #ccc;
+      }
+      .btn-full {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        font-size: 1em;
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+      footer {
+        padding: 20px 40px;
+        margin-top: 30px;
+        font-size: 0.9em;
+      }
+      .facebook-icon {
+        width: 40px;
+        margin-bottom: 15px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div style="display: flex">
+        <a href="../index.html">HOME</a>
+        <a href="eventos.html" class="active">EVENTOS</a>
+        <a href="contato.html">CONTATO</a>
+        <div class="dropdown">
+          <button class="dropbtn">CURSOS</button>
+          <div class="dropdown-content">
+            <a href="cursos.html">Análise e Desenvolvimento de Sistemas</a>
+            <a href="#">Engenharia de Produção</a>
+          </div>
+        </div>
+        <a href="entrar.html">ENTRAR</a>
+      </div>
+      <a href="sobre.html">SOBRE</a>
+    </nav>
+    <div class="header-logo">
+      <img src="../assets/images/Logo.jpg" alt="Instituto Federal São Paulo" />
+    </div>
+    <main>
+      <h2>Inscreva-se</h2>
+      <form action="#" method="post">
+        <div class="form-group-block">
+          <label for="evento">Evento</label>
+          <select id="evento" name="evento">
+            <option value="">-- Selecione --</option>
+            <option value="voe">Voe sem asas</option>
+            <option value="junina">Festa junina</option>
+            <option value="tecnologia">Semana de tecnologia</option>
+          </select>
+        </div>
+        <fieldset>
+          <legend>Informações de Acesso</legend>
+          <div class="form-group-inline">
+            <label>Usuário</label><input type="text" />
+          </div>
+          <div class="form-group-inline">
+            <label>Senha</label><input type="password" />
+          </div>
+          <div class="form-group-inline">
+            <label>Confirme a Senha</label><input type="password" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+          <div class="form-group-inline">
+            <label>Nome Completo</label><input type="text" />
+          </div>
+          <div class="form-group-block">
+            <label>E-mail</label><input type="email" />
+          </div>
+          <div class="form-group-block">
+            <label>Celular (99) 99999-9999</label><input type="tel" />
+          </div>
+          <fieldset
+            style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px"
+          >
+            <legend>Sexo</legend>
+            <label>Masculino <input type="radio" name="sexo" /></label>
+            <label>Feminino <input type="radio" name="sexo" /></label>
+          </fieldset>
+          <div class="form-group-inline">
+            <label>Data de Nascimento</label><input type="date" />
+          </div>
+          <div class="form-group-inline">
+            <label>Cor Favorita</label><input type="color" />
+          </div>
+          <div class="form-group-block">
+            <label>Perfil no Github</label><input type="text" />
+          </div>
+        </fieldset>
+        <input type="submit" class="btn-full" value="Inscrever-se" />
+        <input type="reset" class="btn-full" value="Limpar" />
+      </form>
+    </main>
+    <footer>
+      <img
+        src="../assets/images/facebook.png"
+        alt="Facebook IFSP"
+        class="facebook-icon"
+      />
+      <p>
+        IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP:
+        05110-000 - São Paulo/SP - Contato: (011) 2504-0100
+      </p>
+    </footer>
+  </body>
+</html>
